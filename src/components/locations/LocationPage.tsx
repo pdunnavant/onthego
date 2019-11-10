@@ -1,14 +1,14 @@
-import React from 'react';
-import './LocationPage.css';
-import TravelMap from './TravelMap';
-import { ITravelLocation, TravelLocation } from '../../classes/TravelLocation';
-import { Post } from '../../classes/Post';
-import PostTiles from './PostTiles';
-import TripStats from './TripStats';
-import { differenceInDays } from 'date-fns';
-import { IHistoryProps } from '../../classes/IHistoryProps';
-import LocationDetails from './LocationDetails';
-import { FirestoreHelper } from '../../util/FirestoreHelper';
+import React from 'react'
+import './LocationPage.css'
+import TravelMap from './TravelMap'
+import { ITravelLocation, TravelLocation } from '../../classes/TravelLocation'
+import { Post } from '../../classes/Post'
+import PostTiles from './PostTiles'
+import TripStats from './TripStats'
+import { differenceInDays } from 'date-fns'
+import { IHistoryProps } from '../../classes/IHistoryProps'
+import LocationDetails from './LocationDetails'
+import { FirestoreHelper } from '../../util/FirestoreHelper'
 
 interface ILocationPageProps {
     match?: {
@@ -136,7 +136,7 @@ class LocationPage extends React.Component<ILocationPageProps> {
     }
 
     render() {
-        const daysOnTheRoad = Math.max(differenceInDays(new Date(), new Date(2019, 6, 27)), 0)
+        const daysOnTheRoad = Math.max(differenceInDays(new Date(), new Date(2019, 11, 11)), 0)
         const center = this.state.selectedLocation && this.state.selectedLocation.coordinates && this.state.selectedLocation.coordinates.length > 0 ?
             this.state.selectedLocation.coordinates[0] : undefined
         return (
