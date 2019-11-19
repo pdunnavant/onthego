@@ -1,6 +1,6 @@
 export const firebaseConfig = {
     apiKey: "AIzaSyBjeX7pVLgyaB7RtU2SuqrIbhEg7dJCPeQ",
-    authDomain: "mypaulie-000.firebaseapp.com",
+    authDomain: "whereispaulie.com",
     databaseURL: "https://mypaulie-000.firebaseio.com",
     projectId: "mypaulie-000",
     storageBucket: "mypaulie-000.appspot.com",
