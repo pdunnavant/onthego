@@ -36,8 +36,8 @@ class SchedulePage extends React.Component<ISchedulePageProps> {
     }
 
     formatScheduleDate(ts: TimeStamp): string {
-        const startOfTrip = new Date("6/1/2019")
-        const endOfTrip = new Date("7/7/2020")
+        const startOfTrip = new Date("11/11/2019")
+        const endOfTrip = new Date("11/10/2020")
         const date = ts.toDate()
         const hideDatesPast = new Date()
         hideDatesPast.setMonth(hideDatesPast.getMonth() + 2)
