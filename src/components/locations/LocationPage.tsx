@@ -116,7 +116,13 @@ class LocationPage extends React.Component<ILocationPageProps> {
     computeCountriesVisited(locs: ITravelLocation[]): number {
         const today = new Date()
         let visited = 0;
+        let countryCodeSet = new Set();
         for (const loc of locs) {
+            if (countryCodeSet.has(loc.countrycode)) {
+                continue;
+            }
+            countryCodeSet.add(loc.countrycode);
+
             if (today > loc.arrive.toDate()) {
                 visited++;
             }
